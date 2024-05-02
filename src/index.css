@@ -563,6 +563,28 @@ nav {
   color: var(--white);
 }
 
+div.newsletter-container {
+  background-color: #1F2125;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  padding-top: 0;
+}
+
+.newsletter-container form {
+  display: flex;
+  width: 100%;
+}
+
+.newsletter-container form input {
+  padding: 17px 12px;
+  width: 100%;
+  margin-right: 15px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
 @media (width < 900px) {
   .nav__links {
     display: none;
