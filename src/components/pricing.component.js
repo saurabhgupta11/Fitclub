@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function Pricing() {
+export default function Pricing(props) {
+    const { extraProps } = props;
+    const { pricingRef } = extraProps;
+
     const joinUsTypes = [
         {
             planType: 'Basic Plan',
@@ -19,7 +22,7 @@ export default function Pricing() {
         },
     ];
   return (
-    <section class="section__container price__container">
+    <section class="section__container price__container" ref={pricingRef}>
         <h2 class="section__header">OUR PRICING PLAN</h2>
         <p class="section__subheader">Our pricing plan comes with various membership tiers, each tailored to cater to different preferences and fitness aspirations.</p>
         

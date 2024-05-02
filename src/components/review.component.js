@@ -30,10 +30,6 @@ export default function Review() {
                 <p>Software Developer</p>
               </div>
             </div>
-            <div class="review__nav">
-              <span><i class="ri-arrow-left-line"></i></span>
-              <span><i class="ri-arrow-right-line"></i></span>
-            </div>
           </div>
         </div>
       </div>

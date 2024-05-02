@@ -1,22 +1,28 @@
+import React, { useEffect, useRef } from 'react';
 import FitnessProgram from "./components/fitnessprograms.component";
 import Footer from "./components/footer.component";
 import Header from "./components/header.component";
 import JoinUs from "./components/joinus.component";
 import Navbar from "./components/navbar.component";
+import Newsletter from "./components/newsletter.component";
 import Pricing from "./components/pricing.component";
 import ProgramClass from "./components/programclass.component";
 import Review from "./components/review.component";
 
 function App() {
+  const programRef = useRef();
+  const serviceRef = useRef();
+  const pricingRef = useRef();
   return (
     <>
-      <Navbar />
+      <Navbar extraProps={{ programRef, serviceRef, pricingRef }} />
       <Header />
-      <FitnessProgram />
+      <FitnessProgram extraProps={{ programRef, serviceRef, pricingRef }} />
       <ProgramClass />
-      <JoinUs />
-      <Pricing />
+      <JoinUs extraProps={{ serviceRef }} />
+      <Pricing extraProps={{ pricingRef }} />
       <Review />
+      <Newsletter />
       <Footer />
     </>
   );

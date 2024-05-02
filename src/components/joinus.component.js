@@ -1,7 +1,10 @@
 import React from 'react';
 import JoinUsImage from '../images/join.jpg';
 
-export default function JoinUs() {
+export default function JoinUs(props) {
+    const { extraProps } = props;
+    const { serviceRef } = extraProps;
+
     const joinUsTypes = [
         {
             iconType: 'ri-user-star-fill',
@@ -20,7 +23,7 @@ export default function JoinUs() {
         },
     ];
     return (
-        <section class="section__container join__container">
+        <section class="section__container join__container" ref={serviceRef}>
             <h2 class="section__header">WHY JOIN US ?</h2>
             <p class="section__subheader">
                 Our diverse membership base creates a friendly and supportive

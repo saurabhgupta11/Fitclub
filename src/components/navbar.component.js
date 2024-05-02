@@ -1,8 +1,17 @@
 import React from 'react';
 import Logo from '../images/logo.png';
 
-export default function Navbar() {
-    const links = ['Home', 'Program', 'Service', 'About', 'Community'];
+export default function Navbar(props) {
+    const { extraProps } = props;
+    const { programRef, serviceRef, pricingRef } = extraProps;
+
+    const links = ['Home', 'Program', 'Service', 'Plans', 'Community'];
+
+    const handleSmoothScrolling = (ref) => {
+        ref.current?.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
     return (
         <nav>
             <div class="nav__logo">
@@ -10,7 +19,18 @@ export default function Navbar() {
             </div>
             <ul class="nav__links">
                 {links.map(link => (
-                    <li class="link"><a href="#">{link}</a></li>
+                    // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                    <li class="link"><a href="#" onClick={(e) => {
+                        e.preventDefault();
+                        if (link === 'Program') {
+                            handleSmoothScrolling(programRef);
+                        } else if (link === 'Service') {
+                            handleSmoothScrolling(serviceRef);
+                        }
+                        else if (link === 'Plans') {
+                            handleSmoothScrolling(pricingRef);
+                        }
+                    }}>{link}</a></li>
                 ))}
             </ul>
             <button class="btn">Join Now</button>

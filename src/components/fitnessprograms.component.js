@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default function FitnessProgram() {
+export default function FitnessProgram(props) {
+    const { extraProps } = props;
+    const { programRef } = extraProps;
+
     const fitnessProgramTypes = [
         {
             iconType: 'ri-boxing-fill',
@@ -24,7 +27,7 @@ export default function FitnessProgram() {
         }
     ];
     return (
-        <section class="section__container explore__container">
+        <section class="section__container explore__container" ref={programRef}>
             <div class="explore__header">
                 <h2 class="section__header">EXPLORE OUR PROGRAM</h2>
                 <div class="explore__nav">
