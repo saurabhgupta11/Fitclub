@@ -5,7 +5,7 @@ export default function Navbar(props) {
     const { extraProps } = props;
     const { programRef, serviceRef, pricingRef } = extraProps;
 
-    const links = ['Home', 'Program', 'Service', 'Plans', 'Community'];
+    const links = ['Home', 'Program', 'Service', 'Plans', 'Review'];
 
     const handleSmoothScrolling = (ref) => {
         ref.current?.scrollIntoView({

@@ -8,6 +8,7 @@ import Newsletter from "./components/newsletter.component";
 import Pricing from "./components/pricing.component";
 import ProgramClass from "./components/programclass.component";
 import Review from "./components/review.component";
+import BMI from './components/bmicalculator.component';
 
 function App() {
   const programRef = useRef();
@@ -23,6 +24,7 @@ function App() {
       <Pricing extraProps={{ pricingRef }} />
       <Review />
       <Newsletter />
+      <BMI />
       <Footer />
     </>
   );
