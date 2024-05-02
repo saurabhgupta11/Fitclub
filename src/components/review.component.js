@@ -1,9 +1,11 @@
 import React from 'react';
 import Member from '../images/member.jpg';
 
-export default function Review() {
+export default function Review(props) {
+    const { extraProps } = props;
+    const { reviewRef } = extraProps;
   return (
-    <section class="review">
+    <section class="review" ref={reviewRef}>
       <div class="section__container review__container">
         <span><i class="ri-double-quotes-r"></i></span>
         <div class="review__content">

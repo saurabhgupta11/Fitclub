@@ -3,7 +3,7 @@ import Logo from '../images/logo.png';
 
 export default function Navbar(props) {
     const { extraProps } = props;
-    const { programRef, serviceRef, pricingRef } = extraProps;
+    const { programRef, serviceRef, pricingRef, reviewRef } = extraProps;
 
     const links = ['Home', 'Program', 'Service', 'Plans', 'Review'];
 
@@ -29,6 +29,9 @@ export default function Navbar(props) {
                         }
                         else if (link === 'Plans') {
                             handleSmoothScrolling(pricingRef);
+                        }
+                        else if (link === 'Review') {
+                            handleSmoothScrolling(reviewRef);
                         }
                     }}>{link}</a></li>
                 ))}

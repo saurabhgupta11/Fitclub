@@ -14,15 +14,16 @@ function App() {
   const programRef = useRef();
   const serviceRef = useRef();
   const pricingRef = useRef();
+  const reviewRef = useRef();
   return (
     <>
-      <Navbar extraProps={{ programRef, serviceRef, pricingRef }} />
+      <Navbar extraProps={{ programRef, serviceRef, pricingRef, reviewRef }} />
       <Header />
-      <FitnessProgram extraProps={{ programRef, serviceRef, pricingRef }} />
+      <FitnessProgram extraProps={{ programRef }} />
       <ProgramClass />
       <JoinUs extraProps={{ serviceRef }} />
       <Pricing extraProps={{ pricingRef }} />
-      <Review />
+      <Review extraProps={{ reviewRef }} />
       <Newsletter />
       <BMI />
       <Footer />
