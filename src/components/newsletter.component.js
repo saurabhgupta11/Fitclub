@@ -23,11 +23,14 @@ export default function Newsletter() {
     }
 
     return (
-        <div className='newsletter-container'>
-            <form onSubmit={handleSendEmail} ref={myForm}>
-                <input type="email" name='user_email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='email address' />
-                <button type='submit' className='btn'>Contact</button>
-            </form>
-        </div>
+        <>
+            <h2 className='section-header' style={{ backgroundColor: "#1F2125", textAlign: "center", color: "white", paddingRight: "30px", paddingBottom: "20px" }}>Newsletter</h2>
+            <div className='newsletter-container'>
+                <form onSubmit={handleSendEmail} ref={myForm}>
+                    <input type="email" name='user_email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='email address' />
+                    <button type='submit' className='btn'>Contact</button>
+                </form>
+            </div>
+        </>
     )
 }
